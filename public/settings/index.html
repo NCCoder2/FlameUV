@@ -1,31 +1,118 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="index.js"></script>
-<script>
-  var tabName = localStorage.getItem('tabname');
-  document.title = (tabName)
-</script>
-</head>
-<body>
-
-<nav id="buildTopnav">
-
-</nav>
-  <script>
-$(function(){
-  $("#buildTopnav").load("../navbar.html");
-});
-</script>
-<div id="setting">
-  <form placeholder="Change Tab Title..." onsubmit="buttonCode();">
-    <input type="text" value="" id="nameChange"</input>
-    <input type="button" value="Name Tab" onclick="buttonCode();" id="submitButton"</input>
-  </form>
-</div>
-</body>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+        <h1>Settings Flame Network V2</h1>
+        <nav class="navbar">
+    
+          <ul class="navbar-links">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="">Settings</a></li>
+            <li><a href="/inprogress.html">Games</a></li>
+            <li><a href="/inprogress.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+    
+    <div class="settings">
+        <div class="category">
+            <h2>Tab Cloak</h2>
+            <div class="section-content">
+              <br>
+              <div class="buttons">
+                <input id="title" class="input" placeholder="Title" onkeyup="setTitle(this.value)" />
+                <input id="icon" class="input" placeholder="Favicon" onkeyup="setFavicon(this.value.trim())" />
+              </div>
+              <br>
+              <p class="section-text">Ready Made Cloaks</p>
+              <div class="buttons">
+                <select name="Readymade Cloaks" id="premadecloaks" title="Cloaks">
+                  <option value="search">Google Search</option>
+                  <option value="drive">Google Drive</option>
+                  <option value="youtube">YouTube</option>
+                  <option value="gmail">Gmail</option>
+                  <option value="calendar">Google Calendar</option>
+                  <option value="meets">Google Meet</option>
+                  <option value="classroom">Google Classroom</option>
+                  <option value="canvas">Canvas</option>
+                  <option value="zoom">Zoom</option>
+                  <option value="khan">Khan Academy</option>
+                  <div class="select-buttons">
+                  </div>
+                </select><br>
+                <button class="button button2" onclick="setCloak()">Set</button>
+                <button class="button button2" onclick="resetTab()">Reset</button>
+              </div>
+            </div>
+          </div>
+      
+      <div class="category">
+        <h2>Search Engine</h2>
+        <div class="dropdown">
+          <button class="dropdown-toggle" id="search-engine-dropdown">Select Search Engine</button>
+          <ul class="dropdown-menu" id="search-engine-options">
+            <li data-value="https://www.google.com/search?q=">Google</li>
+            <li data-value="https://www.bing.com/search?q=">Bing</li>
+            <li data-value="https://search.brave.com/search?q=">Brave</li>
+            <li data-value="https://search.yahoo.com/search?p=">Yahoo</li>
+            <li data-value="https://duckduckgo.com/?q=">DuckDuckGo</li>
+          </ul>
+        </div><br>
+        <p class="searchenginechoice">Options for the proxy search engine are: <br><br> Google <br> Bing <br> Brave <br> Yahoo <br> DuckDuckGo <br> StartPage</p>
+        
+      </div>
+      <div class="category">
+        <h2>Panic Key</h2>
+        <div class="setting">
+          <label for="panic-key-input">Key:</label> <br>
+          <input id="panic-key-input" style="width:90%" type="text" value="]" />
+        </div>
+        <div class="setting">
+          <label for="panic-website-input">Website:</label><br>
+          <input id="panic-website-input" style="width:90%" type="text" value="https://classroom.google.com" />
+        </div>
+        <div class="button-container">
+          <button class="panicbtn" onclick="setPanicKey()">Save</button>
+        </div>
+      </div>
+      
+      
+      <!-- JavaScript to Handle Dropdown Selection and Local Storage -->
+      <script>
+        var dropdownToggle = document.getElementById("search-engine-dropdown");
+        var dropdownMenu = document.getElementById("search-engine-options");
+      
+        dropdownToggle.addEventListener("click", function() {
+          dropdownMenu.classList.toggle("show");
+        });
+      
+        // Store selected search engine value in local storage
+        var searchEngineOptions = document.querySelectorAll("#search-engine-options li");
+      
+        searchEngineOptions.forEach(function(option) {
+          option.addEventListener("click", function() {
+            var selectedValue = this.getAttribute("data-value");
+            localStorage.setItem("selectedSearchEngine", selectedValue);
+            // Display a confirmation message or perform other actions as needed
+            alert("Search engine preference saved!");
+      
+            // Update the search engine in the search bar
+            var input = document.getElementById("search-bar-input");
+            input.setAttribute("data-search-engine", selectedValue);
+          });
+        });
+      </script>      
+        <script src="js/index.js"></script>
+        <script src="js/settings.js"></script>
+        <script src="js/panic.js"></script>
+  </body>
 </html>

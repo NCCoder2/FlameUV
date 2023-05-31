@@ -1,42 +1,104 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="style.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-     <script>
-  var tabName = localStorage.getItem('tabname');
-  document.title = (tabName)
-</script>
-   </head>
-   <body>
-      <nav id="myTopnav">
-         <a href="" class="active">LUNANOM</a>
-         <a href="apps">Apps</a>
-         <a href="sealcraft">Minecraft</a>
-         <a href="settings">Settings</a>
-         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-         <i class="fa fa-bars"></i>
-         </a>
-      </nav>
-      <div style="padding-left:16px; text-align: center; color: white;">
-      <br> 
-      <h1>LUNANOM</h1>
-      </br>
-      <form id="searchbar"action="/service" method="POST">
-         <input type="text" name="url" class="form__input" id="name" placeholder="Search the web freely..." />
-      </form>
-      <div id="section">
-        <div id="featured">
+</div>
+  <head>
+    <link rel="stylesheet" href="index.css" />
+    <script src="uv/uv.bundle.js" defer></script>
+    <script src="uv/uv.config.js" defer></script>
+    <script src="index.js" defer></script>
+     <scri pt async src="https://arc.io/widget.min.js#7XhXtAPs"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Flame Network</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  </head>
 
+  <body>
+    <div class="navbar-brand">Flame Network</div>
+    <nav class="navbar">
+
+      <ul class="navbar-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="about">About</a></li>
+        <li><a href="inprogress.html">Games</a></li>
+        <li><a href="settings">Settings</a></li>
+        <li><a href="inprogress.html">Contact</a></li>
+      </ul>
+    </nav>
+  
+    <div class="container">
+      <section id="home" class="flames-header">
+        <h1>Welcome to Flame Network</h1>
+        <p>Home to the ONLY web proxy to supporting <a href="https://now.gg" target="_blank" style="text-decoration:none; text-transform:uppercase; color:red;">now.gg </a></p>
         </div>
+  
+      <section id="services" class="flames-section">
+        <h2>Services</h2>
+        <div class="flame-item">
+          <i class="flame-icon fas fa-fire"></i>
+          <p style="color:lightcoral" onclick="toggleAddress()">Flames Proxy</p>
+        </div>
+        <div class="flame-item">
+          <i class="flame-icon fas fa-fire"></i>
+          <p style="color:red"onclick="window.open('https://discord.gg/flameworks', '_blank');">Discord</p>
+        </div>
+        <div class="flame-item" style="opacity:0.4; cursor:wait">
+          <i class="flame-icon fas fa-fire"></i>
+          <p style="color:lightcoral">Coming Soon</p>
+        </div>
+      </section>
+  
+      <br>
+      <div class="proxy-button-container">
+        <button class="proxy-button"  onclick="toggleAddress()" id="proxybutton">Access Now.GG Web Proxy</button>
       </div>
-      <div id="bottom">
-         <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+      <form id="form" action="/service" class="flex-center" style="padding:0;">
+        <div class="group">
+          <input id="input" name="search" type="text" placeholder="Search Google or type an URL" class="web-input" />
+        </div>
+      </form>
+  
+      <div class="desc left-margin">
+        <p id="uv-error"></p>
+        <pre id="uv-error-code"></pre>
       </div>
-      <script src="uv/uv.bundle.js"></script>
-      <script src="uv/uv.config.js"></script>
-      <script src="index.js"></script>
-   </body>
+    </div>
+  </body>
 </html>
+
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+    var selectedSearchEngine = localStorage.getItem("selectedSearchEngine");
+    if (selectedSearchEngine) {
+      alert("Selected search engine: " + selectedSearchEngine);
+    }
+  });
+</script>
+<script>
+  addressElement.style.opacity = '1';
+   function toggleAddress() {
+  var addressElement = document.getElementById('input');
+  if (addressElement.style.display === 'none') {
+    addressElement.style.display = 'block';
+
+    addressElement.style.opacity = '0';
+    setTimeout(function() {
+      addressElement.style.transition = 'width 1s ease-out, opacity 1s ease-out';
+      addressElement.style.opacity = '1';
+    }, 0);
+  } else {
+    addressElement.style.transition = 'width 1s ease-out, opacity 1s ease-out';
+    addressElement.style.opacity = '0';
+    setTimeout(function() {
+      addressElement.style.display = 'none';
+    }, 1000);
+  }
+}
+
+
+</script>
+<script src="settings/js/index.js"></script>
+<script src="settings/js/settings.js"></script>
+<script src="settings/js/panic.js"></script>

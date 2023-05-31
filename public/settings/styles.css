@@ -1,0 +1,265 @@
+body {
+  background-color: #000;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+.header {
+  background-image: linear-gradient(to right, #ff6b6b, #ff3838);
+  padding: 20px;
+  margin-top: 0.6%;
+  text-align: center;
+  width:30%;
+  margin-right:35%;
+  margin-left: 33.5%;
+}
+
+.header h1 {
+  font-size: 36px;
+  margin: 0;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.settings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.category {
+  background-color: rgba(255, 107, 107, 0.2);
+  border: 2px solid #ff6b6b;
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+}
+
+.category h2 {
+  font-size: 24px;
+  margin-top: 0;
+  color: #ff6b6b;
+  text-align: center;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  background-color: #ff6b6b;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  font-family: Arial, sans-serif;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  background-color: #fff;
+  width: 100%;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.dropdown-menu li {
+  padding: 5px;
+  font-family: Arial, sans-serif;
+  color:black;
+}
+
+.dropdown-menu li:hover {
+  background-color: #ff6b6b;
+  color: #fff;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: #000;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.section-content {
+  margin-top: 20px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.input {
+  padding: 5px;
+  width: 200px;
+}
+
+.section-text {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button {
+  background-color: #ff6b6b;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button2 {
+  background-color: #ff6b6b;
+  color: #fff;
+}
+
+button.button2 {
+  margin-left: 10px;
+}
+
+select {
+  width: 200px;
+  padding: 5px;
+}
+
+.searchenginechoice {
+  font-size: 18px;
+  color: #fff;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.navbar {
+  background-color: #000;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end; /* Align navbar to the right */
+  position: fixed;
+  top: 0;
+  right: 0; /* Position navbar on the right side */
+  width: fit-content;
+}
+
+.navbar-links {
+  list-style-type: none;
+  margin: 0;
+  padding-top: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links li {
+  margin-left: -14%;
+  padding-left: 7.75%;
+  padding-right: 7.75%;
+}
+
+.navbar-links li a {
+  color: #fff;
+  text-decoration: none;
+  padding-right: 5px;
+  padding-left: 5px;
+  position: relative;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out;
+}
+
+
+
+.navbar-links li a:hover {
+  color: #ff6b6b;
+}
+.category {
+  background-color: rgba(255, 107, 107, 0.2);
+  border: 2px solid #ff6b6b;
+  border-radius: 10px;
+  padding: 20px;
+  width: calc(100%/2.4); /* Adjust the width as desired */
+  margin: 20px;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+
+.category h2 {
+  font-size: 24px;
+  margin-top: 0;
+  color: #ff6b6b;
+  text-align: center;
+}
+
+.setting {
+  margin-bottom: 20px;
+}
+
+.setting label {
+  font-size: 18px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.setting input {
+  font-size: 16px;
+  padding: 8px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.panicbtn {
+  background-color: #ff6b6b;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.panicbtn:hover {
+  background-color: #ff3d3d;
+}

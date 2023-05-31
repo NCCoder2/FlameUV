@@ -1,0 +1,183 @@
+ body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  
+}
+
+.navbar {
+  background-color: #000;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end; /* Align navbar to the right */
+  position: fixed;
+  top: 0;
+  right: 0; /* Position navbar on the right side */
+  width: fit-content;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  margin-left:0.5%;
+  padding-top: 5px;
+  font-weight: bold;
+  color: #ff6b6b;
+  cursor: pointer;
+}
+
+.navbar-links {
+  list-style-type: none;
+  margin: 0;
+  padding-top: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links li {
+  margin-left: -14%;
+  padding-left: 7.75%;
+  padding-right: 7.75%;
+}
+
+.navbar-links li a {
+  color: #fff;
+  text-decoration: none;
+  padding-right: 5px;
+  padding-left: 5px;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-links li a:hover {
+  color: #ff6b6b;
+}
+
+.container {
+  max-width: 960px;
+  margin: 80px auto;
+  padding: 20px;
+}
+
+.flames-header {
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: -4.987%;
+}
+
+.flames-header h1 {
+  font-size: 48px;
+  color: #ff6b6b;
+  
+}
+
+.flames-header p {
+  font-size: 24px;
+  color: #fff;
+}
+
+.flames-logo {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.flames-description {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.flames-description p {
+  font-size: 18px;
+}
+
+.flames-section {
+  text-align: center;
+  margin-top:-5%;
+}
+
+.flames-section h2 {
+  font-size: 34px;
+  color: #ff4b6b;
+  text-align: center;
+}
+
+.flames-section p {
+  font-size: 16px;
+  text-align: center;
+}
+
+.flames-section .flame-icon {
+  font-size: 48px;
+  text-align: center;
+  color: #ff6b6b;
+}
+
+.flames-section .flame-item {
+  display: inline-block;
+  cursor:default;
+  text-align: center;
+  margin: 0 10px; /* Add spacing here */
+}
+
+
+.web-input {
+  background-color: transparent;
+  border: 2px solid #ffaa00; 
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 2.5%;
+  padding: 10px 10px;
+  outline: none;
+  width: 15%;
+  margin-right: 42.5%;
+  margin-left: 42.1%;
+  transition: border-color 0.4s ease;
+}
+
+.web-input:not(:focus) {
+  border-color: #ff6b6b;
+  transition: border-color 0.25s ease;
+}
+
+.web-input:hover {
+  border-color: #FFE043;
+}
+
+
+
+.web-input::placeholder{
+  text-align: center;
+}
+
+.proxy-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+
+.proxy-button {
+  background-color: #ff6b4b;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.proxy-button:hover {
+  background-color: #ff3d3d;
+}
+
+.web-input::placeholder{
+  text-align: center;
+}
+
+#input {
+  display: none;
+}
