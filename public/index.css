@@ -195,9 +195,9 @@
   border-radius: 10px;
   cursor:default;
   width: 150px;
-  height: 40px;
+  height: 47.5px;
   justify-content: center;
-  opacity: 0.4;
+  opacity: 0.85;
   margin-right: 100px;
 }
 
@@ -213,12 +213,19 @@
   padding: 20px;
   border-radius: 10px;
   width: 150px;
-  height: 40px;
-  opacity: 0.4;
+  height: 47.5px;
+  opacity: 0.85;
 }
 
 #Update-Log h2{
-  font-size: 15px;
+  font-size: 20px;
   color:white;
+  text-align: center;
+  margin-top: -12.2%;
+}
+
+.updatenav{
+  font-size: 12px;
+  margin-top: -10%;
   text-align: center;
 }
