@@ -14,7 +14,10 @@
     <link rel="manifest" href="favicon/site.webmanifest">
 </head>
 <body style="background-color: black;">
-    <div class="navbar-brand" style="margin-top:0.25%">Flame Network     <a class="back"href="javascript:history.go(-1)"><i class="fas fa-arrow-left"></i>Back</a> </div>
+    <div class="navbar-brand" style="margin-top:0.25%">Flame Network
+        <a class="back"href="javascript:history.go(-1)"><i class="fas fa-arrow-left"></i>‎  Back</a> 
+        <a class="fullscreen-button" onclick="toggleFullscreen()"><i class="fas fa-expand-arrows-alt"></i>‎  Fullscreen</a>
+    </div>
     <nav class="navbar">
       <ul class="navbar-links">
         <li><a href="#home">Home</a></li>
@@ -40,27 +43,42 @@
 <script src="setting/js/panic.js"></script>
 
 <style>
-    .back {
-        display: flex;
-        align-items: center;
-        color: #fff;
-        text-decoration: none;
-        padding-right: 5px;
-        padding-left: 5px;
-        font-size: 16px;
-        transition: color 0.3s ease-in-out;
-        margin-left: 45%;
-        margin-top: -1.25%;
-        margin-bottom: 2%;
-    }
 
-    .back i {
-        margin-right: 5px;
-    }
 
-    .back:hover {
-        color: black;
-        background-image: linear-gradient(to right, #6bbcff, #0080ff);
-        width:3%
-    }
+.fullscreen-button, .back {
+  background-color: #ff6b6b;
+  color: #fff;
+  font-size: 16px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 7px;
+  padding-left: 7px;
+  height:20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.fullscreen-button:hover, .back:hover {
+  background-color: #ff3d3d;
+}
+
 </style>
+
+
+<script>
+    function toggleFullscreen() {
+  var iframe = document.getElementById('iframeurl');
+  if (!document.fullscreenElement) {
+    iframe.requestFullscreen();
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
+}
+
+</script>
