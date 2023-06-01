@@ -4,10 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://arc.io/widget.min.js#7XhXtAPs"></script>
+    <link rel="stylesheet" href="index.css" />
+    <title>Flame Network</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
 </head>
-<body>
+<body style="background-color: black;">
+    <div class="navbar-brand" style="margin-top:0.25%">Flame Network     <a class="back"href="javascript:history.go(-1)"><i class="fas fa-arrow-left"></i>Back</a> </div>
+    <nav class="navbar">
+      <ul class="navbar-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="about">About</a></li>
+        <li><a href="apps.html">Apps</a></li>
+        <li><a href="inprogress.html">Games</a></li>
+        <li><a href="setting">Settings</a></li>
+        <li><a href="inprogress.html">Contact</a></li>
+      </ul>
+    </nav>
     <div class="iframe">
-        <iframe id="iframeurl" src="" style="border: 0; height: calc(100vh - 50px); left: 0; position: absolute; top: 0; width: 100%; bottom: 0; margin-top: 50px;"></iframe>
+        <iframe id="iframeurl" src="" style="border: 0; height: calc(100vh - 5%); left: 0; position: absolute; top: 0; width: 100%; bottom: 0; margin-top: 50px;"></iframe>
         <script>
             document.getElementById("iframeurl").src=(localStorage.getItem('iframeurl'))
             
@@ -16,3 +35,32 @@
     </div>
     </body>
 </html>
+<script src="setting/js/index.js"></script>
+<script src="setting/js/settings.js"></script>
+<script src="setting/js/panic.js"></script>
+
+<style>
+    .back {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        text-decoration: none;
+        padding-right: 5px;
+        padding-left: 5px;
+        font-size: 16px;
+        transition: color 0.3s ease-in-out;
+        margin-left: 45%;
+        margin-top: -1.25%;
+        margin-bottom: 2%;
+    }
+
+    .back i {
+        margin-right: 5px;
+    }
+
+    .back:hover {
+        color: black;
+        background-image: linear-gradient(to right, #6bbcff, #0080ff);
+        width:3%
+    }
+</style>
