@@ -129,13 +129,15 @@
   border-radius: 10px;
   color: #fff;
   font-size: 16px;
-  margin-top: 2.5%;
+  margin-top: -4%;
+  display:inline;
   padding: 10px 10px;
   outline: none;
   width: 15%;
   margin-right: 42.5%;
   margin-left: 42.1%;
   transition: border-color 0.4s ease;
+  animation: fadeIn 2s ease-out;
 }
 
 .web-input:not(:focus) {
@@ -144,9 +146,27 @@
 }
 
 .web-input:hover {
-  border-color: #FFE043;
+  border-color: #ffaa00; 
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    olor:#ff6b6b;
+  }
+  25% {
+    opacity: 0.25;
+    color:#ff6b6b;
+  }
+  50% {
+    opacity: 0.5;
+    color:#ff6b6b;
+  }
+  100% {
+    opacity: 1;
+    color:#ff6b6b;
+  }
+}
 
 
 .web-input::placeholder{
@@ -159,25 +179,46 @@
 }
 
 
-.proxy-button {
-  background-color: #ff6b4b;
-  color: #fff;
-  font-size: 18px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.proxy-button:hover {
-  background-color: #ff3d3d;
-}
-
 .web-input::placeholder{
   text-align: center;
 }
 
-#input {
-  display: none;
+
+#time {
+  font-size: 16px;
+  margin-top: 200px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #ff3d3d;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  cursor:default;
+  width: 150px;
+  height: 40px;
+  justify-content: center;
+  opacity: 0.4;
+  margin-right: 100px;
+}
+
+#Update-Log {
+  margin-top: 200px;
+  font-size: 10px;
+  border-width: 10px;
+  cursor:default;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #ff3d3d;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 150px;
+  height: 40px;
+  opacity: 0.4;
+}
+
+#Update-Log h2{
+  font-size: 15px;
+  color:white;
+  text-align: center;
 }

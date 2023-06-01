@@ -32,13 +32,14 @@
       <section id="home" class="flames-header">
         <h1>Welcome to Flame Network</h1>
         <p>Home to the ONLY web proxy to supporting <a href="https://now.gg" target="_blank" style="text-decoration:none; text-transform:uppercase; color:red;">now.gg </a></p>
+         <p style="font-size:15px;">Version 2.1 just released. You can view the full changelog <a href="/changelog" style="font-size: 15px;"> HERE </a></p>
         </div>
   
       <section id="services" class="flames-section">
         <h2>Services</h2>
         <div class="flame-item">
           <i class="flame-icon fas fa-fire"></i>
-          <p style="color:lightcoral" onclick="toggleAddress()">Flames Proxy</p>
+          <p style="color:lightcoral">Flames Proxy</p>
         </div>
         <div class="flame-item">
           <i class="flame-icon fas fa-fire"></i>
@@ -52,19 +53,26 @@
   
       <br>
       <div class="proxy-button-container">
-        <button class="proxy-button"  onclick="toggleAddress()" id="proxybutton">Access Now.GG Web Proxy</button>
       </div>
       <form id="form" action="/service" class="flex-center" style="padding:0;">
         <div class="group">
-          <input id="input" name="search" type="text" placeholder="Search The Web or Enter A URL" class="web-input" />
+          <input id="input" name="search" type="text" style="display:inline" placeholder="Search The Web or Enter A URL" class="web-input" />
         </div>
       </form>
-  
-      <div class="desc left-margin">
-        <p id="uv-error"></p>
-        <pre id="uv-error-code"></pre>
-      </div>
     </div>
+    <div class="desc left-margin">
+      <p id="uv-error"></p>
+      <pre id="uv-error-code"></pre>
+    </div>
+    <section id="widgets" class="flames-section">
+      <div style="display: flex; justify-content: center;">
+        <div id="time"></div>
+        <div id="Update-Log">
+          <h2>Released Version 2.1</h2>
+          
+        </div>
+      </div>
+    </section>
   </body>
 </html>
 
@@ -76,29 +84,7 @@
     }
   });
 </script>
-<script>
-  addressElement.style.opacity = '1';
-   function toggleAddress() {
-  var addressElement = document.getElementById('input');
-  if (addressElement.style.display === 'none') {
-    addressElement.style.display = 'block';
 
-    addressElement.style.opacity = '0';
-    setTimeout(function() {
-      addressElement.style.transition = 'width 1s ease-out, opacity 1s ease-out';
-      addressElement.style.opacity = '1';
-    }, 0);
-  } else {
-    addressElement.style.transition = 'width 1s ease-out, opacity 1s ease-out';
-    addressElement.style.opacity = '0';
-    setTimeout(function() {
-      addressElement.style.display = 'none';
-    }, 1000);
-  }
-}
-
-
-</script>
 <script src="setting/js/index.js"></script>
 <script src="setting/js/settings.js"></script>
 <script src="setting/js/panic.js"></script>
@@ -112,4 +98,16 @@
     }
     
   });
+</script>
+
+<script>
+  function updateTime() {
+  var widget = document.getElementById("time");
+  var now = new Date();
+  var date = now.toDateString();
+  var time = now.toLocaleTimeString();
+  widget.innerHTML =  time +"<br>" +  date;
+}
+
+setInterval(updateTime, 1000);
 </script>
