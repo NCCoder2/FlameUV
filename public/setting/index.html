@@ -2,10 +2,11 @@
 <html>
   <head>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
+    <title> Flame Network Settings </title>
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -98,26 +99,33 @@
       
       
       <!-- JavaScript to Handle Dropdown Selection and Local Storage -->
-      <script>
-        var dropdownToggle = document.getElementById("search-engine-dropdown");
-        var dropdownMenu = document.getElementById("search-engine-options");
-      
-        dropdownToggle.addEventListener("click", function() {
-          dropdownMenu.classList.toggle("show");
-        });
-      
-        // Store selected search engine value in local storage
-        var searchEngineOptions = document.querySelectorAll("#search-engine-options li");
-        
-        searchEngineOptions.forEach(function(option) {
-          option.addEventListener("click", function() {
-            var selectedValue = this.getAttribute("data-value");
-            localStorage.setItem("selectedSearchEngine", selectedValue);
-            // Display a confirmation message or perform other actions as needed
-            alert("Search engine preference saved!");
-          });
-        });
-      </script>
+      <!-- JavaScript to Handle Dropdown Selection and Local Storage -->
+<!-- JavaScript to Handle Dropdown Selection and Local Storage -->
+<script>
+  var dropdownToggle = document.getElementById("search-engine-dropdown");
+  var dropdownMenu = document.getElementById("search-engine-options");
+
+  dropdownToggle.addEventListener("click", function() {
+    dropdownMenu.classList.toggle("show");
+  });
+
+  // Store selected search engine value in local storage
+  var searchEngineOptions = document.querySelectorAll("#search-engine-options li");
+
+  searchEngineOptions.forEach(function(option) {
+    option.addEventListener("click", function() {
+      var selectedValue = this.getAttribute("data-value");
+      selectedValue = selectedValue || "https://www.google.com/search?q="; // Set default value
+      localStorage.setItem("selectedSearchEngine", selectedValue);
+      // Display a confirmation message or perform other actions as needed
+      alert("Search engine preference saved!");
+    });
+  });
+
+ 
+</script>
+
+
         <script src="js/index.js"></script>
         <script src="js/settings.js"></script>
         <script src="js/panic.js"></script>

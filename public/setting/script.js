@@ -25,4 +25,4 @@ document.addEventListener("click", (event) => {
       }
     });
   }
-});c
+});

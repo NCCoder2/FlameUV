@@ -2,13 +2,12 @@
 <html>
 <head>
   <title>Flame Network - Apps</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="apps.css" />
 </head>
 <body>
     <header class="header">
-        <h1>Apps Flame Network V2</h1>
+        <h1>Apps Flame Netwsork V2</h1>
         <nav class="navbar">
-    
           <ul class="navbar-links">
             <li><a href="/index.html">Home</a></li>
             <li><a href="">About</a></li>
@@ -17,27 +16,30 @@
             <li><a href="/inprogress.html">Contact</a></li>
           </ul>
         </nav>
-      </header>
+    </header>
 
   <section class="apps-section">
-    <div class="apps-container" onclick="openURL('discord.com/')">
-      <div class="app">
+    <div class="apps-container">
+      <div class="app" onclick="openURL('discord.com/app')">
         <img src="icons/discord.png" alt="Discord">
         <h3>Discord</h3>
       </div>
-      <div class="app">
+      <div class="app" onclick="openURL('netflix.com')">
         <img src="icons/netflix.png" alt="Netflix">
         <h3>Netflix</h3>
       </div>
-      <div class="app">
+      <div class="app" onclick="openURL('youtube.com')">
         <img src="icons/youtube.jpg" alt="YouTube">
-        <h3>YouTube</h3>
+        <h3>YouTubse</h3>
       </div>
       <!-- Add more app entries here -->
     </div>
   </section>
-  <script src="/public/index.js"></script>
-  <script src="/index.js"></script>
+  <script src="uv/uv.bundle.js" defer></script>
+  <script src="uv/uv.config.js" defer></script>
+  <script src="uv/uv.handler.js" defer></script>
+  <script src="uv/uv.sw.js" defer></script>
+  <script src="index.js" defer></script>  
 </body>
 </html>
 
