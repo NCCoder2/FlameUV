@@ -187,7 +187,6 @@
 #time {
   font-size: 16px;
   margin-top: 200px;
-  font-family: Arial, sans-serif;
   text-align: center;
   background-color: #ff3d3d;
   color: white;
@@ -195,30 +194,31 @@
   border-radius: 10px;
   cursor:default;
   width: 150px;
-  height: 47.5px;
+  height: 55px;
   justify-content: center;
   opacity: 0.85;
   margin-right: 100px;
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 #Update-Log {
   margin-top: 200px;
   font-size: 10px;
   border-width: 10px;
   cursor:default;
-  font-family: Arial, sans-serif;
   text-align: center;
   background-color: #ff3d3d;
   color: white;
   padding: 20px;
   border-radius: 10px;
   width: 150px;
-  height: 47.5px;
+  font-family: 'Open Sans', sans-serif;
+  height: 55px;
   opacity: 0.85;
 }
 
 #Update-Log h2{
   font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
   color:white;
   text-align: center;
   margin-top: -12.2%;
@@ -226,6 +226,7 @@
 
 .updatenav{
   font-size: 12px;
+  font-family: 'Open Sans', sans-serif;
   margin-top: -10%;
   text-align: center;
 }
