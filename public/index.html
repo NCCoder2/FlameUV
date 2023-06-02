@@ -4,8 +4,10 @@
   <head>
     <link rel="stylesheet" href="index.css" />
     <script src="uv/uv.bundle.js" defer></script>
+    <meta charset="UTF-8">
     <script src="uv/uv.config.js" defer></script>
     <script src="index.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
      <script async src="https://arc.io/widget.min.js#7XhXtAPs"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -67,7 +69,9 @@
     </div>
     <section id="widgets" class="flames-section">
       <div style="display: flex; justify-content: center;">
-        <div id="time"></div>
+        <div id="time">
+          <p id="timetxt"> </p>
+        </div>
         <div id="Update-Log">
           <h2>Released V2.1</h2>
           <nav class="updatenav">
@@ -90,7 +94,7 @@
     }
   });
 </script>
-
+<script src="weather.js"></script>
 <script src="setting/js/index.js"></script>
 <script src="setting/js/settings.js"></script>
 <script src="setting/js/panic.js"></script>
@@ -108,7 +112,7 @@
 
 <script>
   function updateTime() {
-  var widget = document.getElementById("time");
+  var widget = document.getElementById("timetxt");
   var now = new Date();
   var date = now.toDateString();
   var time = now.toLocaleTimeString();

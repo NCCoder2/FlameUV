@@ -12,7 +12,7 @@ form.addEventListener('submit', async event => {
     else if (!(url.startsWith('https://') || url.startsWith('http://'))) url = 'http://' + url;
 
     localStorage.setItem('iframeurl', __uv$config.prefix + __uv$config.encodeUrl(url))
-          window.location.href = "./iframe.html";
+          window.location.href = "./drive.html";
   });
 });
 
@@ -32,7 +32,7 @@ function openURL(url) {
     else if (!(url.startsWith("https://") || url.startsWith("http://")))
         url = "http://" + url;
        localStorage.setItem('iframeurl', __uv$config.prefix + __uv$config.encodeUrl(url))
-          window.location.href = "./iframe.html";
+          window.location.href = "./drive.html";
 
   });
 };
