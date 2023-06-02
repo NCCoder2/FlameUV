@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script async src="https://arc.io/widget.min.js#7XhXtAPs"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/site.webmanifest">
+    <title>Flame Network | Changelog</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Changelog Flame Network V2</h1>
+    </header>
+    <nav class="navbar">
+        <ul class="navbar-links">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/apps.html">Apps</a></li>
+          <li><a href="/inprogress.html">Games</a></li>
+          <li><a href="/setting">Settings</a></li>
+          <li><a href="/inprogress.html">Contact</a></li>
+        </ul>
+      </nav>
+    <div class="container">
+        <div class="changelog">
+            <div class="changelog-item">
+                <h2>Version 2.2 - Minor Change [6/2/2023] </h2>
+                <p>
+                    - Added Widget to home screen<br>
+                    - Shows Time [Widget]<br>
+                    - Shows Latest Change [Widget]<br>
+                    - Got rid of Access Proxy Button, Replaced with fade in animation <br>
+                    - Added Changelog
+
+                </p>
+            </div>
+            <div class="changelog-item">
+                <h2>Version 2.1 [6/1/2023] </h2>
+                <p>
+                    - Added Settings Page<br>
+                    - Added About:Blank [Settings Page]  <br>
+                    - Added Search Engine Switcher [Settings Page] <br>
+                    - Added Tab Cloaking [Settings Page] <br>
+                    - Added Switched [Settings Page]
+
+                </p>
+            </div>
+            <div class="changelog-item">
+                <h2>Version 2.0 [5/30/2023] </h2>
+                <p>
+                    - Improved Frontend (Replaced HTML,CSS,JS) <br>
+                    - Switched back to UV Backend, Solving Proxy Load Error <br>
+                    - [Switched to  ]Modified UV to work with Spotify and other fixes <br>
+                    - Fixed now.gg screen bug <br>
+                    - Added About Page<br>
+                    - Changes Search Engine to Brave 
+                </p>
+            </div>
+            <div class="changelog-item">
+                <h2>Version 1.0 [3/12/2023]</h2>
+                <p>
+                - Initial release
+                </p>
+            </div>
+        </div>
+        <p class="view-full-changelog">
+            This was possible thanks to: <br><br> <a href="https://discordapp.com/users/934223443275165696" target="_blank">NC Gaming#8436</a> <br> <a href="https://discordapp.com/users/1001220536619249665" target="_blank">AldessSc#9187</a> <br> <a href="https://discordapp.com/users/590337656333008896" target="_blank">https#3021</a> <br><br> Join our Discord <a style="font-weight:bold" href="https://discord.gg/flameworks" target="_blank">HERE</a>
+        </p>
+    </div>
+</body>
+</html>
+
+<script src="/setting/js/index.js"></script>
+<script src="/setting/js/settings.js"></script>
+<script src="/setting/js/panic.js"></script>
+
+<script>
+    // Function to handle keydown event and trigger redirection
+  document.addEventListener("keydown", function(event) {
+    var panicKey = localStorage.getItem("panicKey");
+    var panicWebsite = localStorage.getItem("panicWebsite");
+  
+    if (event.key === (panicKey || "]")) {
+      var website = (panicWebsite || "https://classroom.google.com").toLowerCase();
+  
+      // Check if "http://" or "https://" is missing and add it
+      if (!website.startsWith("http://") && !website.startsWith("https://")) {
+        website = "http://" + website;
+      }
+  
+      window.location.href = website;
+    }
+  });
+  </script>

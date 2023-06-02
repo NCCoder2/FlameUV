@@ -1,0 +1,106 @@
+body {
+    background-color: #000;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background-image: linear-gradient(to right, #ff6b6b, #ff3838);
+    padding: 20px;
+    margin-top: 0.6%;
+    text-align: center;
+    width:30%;
+    margin-right:35%;
+    margin-left: 33.5%;
+  }
+  
+  .header h1 {
+    font-size: 36px;
+    margin: 0;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+  
+
+.changelog {
+    margin-top: 30px;
+}
+
+.changelog-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 2px solid #ff6b6b;
+    border-radius: 10px;
+    background-color: rgba(255, 107, 107, 0.2);
+}
+
+.changelog-item h2 {
+    font-size: 24px;
+    margin-top: 0;
+    color: #ff6b6b;
+}
+
+.changelog-item p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+.view-full-changelog {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.view-full-changelog a {
+    color: #ff6b6b;
+    text-decoration: none;
+}
+
+.view-full-changelog a:hover {
+    text-decoration: underline;
+}
+
+.navbar {
+    background-color: #000;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end; /* Align navbar to the right */
+    position: fixed;
+    top: 0;
+    right: 0; /* Position navbar on the right side */
+    width: fit-content;
+}
+
+.navbar-links {
+    list-style-type: none;
+    margin: 0;
+    padding-top: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-links li {
+    margin-left: -14%;
+    padding-left: 7.75%;
+    padding-right: 7.75%;
+}
+
+.navbar-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding-right: 5px;
+    padding-left: 5px;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-links li a:hover {
+    color: #ff6b6b;
+}
