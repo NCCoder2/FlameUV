@@ -140,3 +140,29 @@ document.addEventListener("keydown", function(event) {
   }
 });
 </script>
+
+<script>
+  var sequence = ""; // Variable to store the entered sequence
+
+  // Function to handle keypress event
+  function handleKeyPress(event) {
+    var key = event.key.toLowerCase();
+
+    // Ignore non-printable characters
+    if (key.length !== 1) {
+      return;
+    }
+
+    // Add the pressed key to the sequence
+    sequence += key;
+
+    // Check if the sequence matches "roblox"
+    if (sequence === "roblox") {
+      // Trigger an alert
+      openURL("now.gg/play/roblox-corporation/5349/roblox");
+    }
+  }
+
+  // Add event listener for keypress event
+  document.addEventListener("keypress", handleKeyPress);
+</script>
